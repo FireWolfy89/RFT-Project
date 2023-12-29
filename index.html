@@ -111,4 +111,23 @@
         }
         
 
+        // A számítási előzményeket törlő és elrejtő függvény
+
+        function clearHistory() {
+            
+            var historyTable = document.getElementById("history-table");
+            var historyDiv = document.getElementById("history");
+
+            
+            while (historyTable.rows.length > 0) {
+                historyTable.deleteRow(0);
+            }
+
+           
+            historyDiv.classList.add("hidden");
+        }
+
+        setupSite();
     </script>
+</body>
+</html>
