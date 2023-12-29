@@ -41,3 +41,36 @@ button {
     grid-template-columns: auto auto;     /* minden sorban 2 oszlopunk lesz: ezek szélessége automatikusan lesz kiszámítva (auto) */
     grid-gap: 10px;                       /* a rács elemei közötti helyköz */
 }
+
+.grid button {
+    width: 100px;
+    margin-left: auto;                    /* az objektum vízszintesen jobbra igazítása */
+}
+
+#history {
+    width: 500px;
+    margin: 40px auto;
+}
+
+#history button {
+    width: 100%;                          /* a gomb szélessége az őt tartalmazó elem teljes szélessége */
+}
+
+.hidden {
+    display: none;                        /* objektum eltüntetése */
+}
+
+table {
+    background-color: #FFF;
+    border: 1px solid black;
+    border-collapse: collapse;            /* táblázatszegélyek összevonása */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+td {
+    width: 50%;                           /* a táblázatcellák szélessége a táblázat teljes szélességének a fele */
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
