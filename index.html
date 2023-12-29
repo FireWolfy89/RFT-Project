@@ -91,6 +91,24 @@
 
             addToHistory(elso,muv,masodik,result);
         }
+
+         // A számítási előzményeket megjelenítő függvény
+
+        function addToHistory(num1, op, num2, result) {
+
+            var historyTable = document.getElementById("history-table");
+
+            var newRow = historyTable.insertRow();
+
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+
+            cell1.innerHTML = num1 + " " + op + " " + num2;
+            cell2.innerHTML = result;
+
+            document.getElementById("history").classList.remove("hidden");
+
+        }
         
 
     </script>
