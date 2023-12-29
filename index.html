@@ -50,4 +50,47 @@
             boldP.style.fontWeight = 'bold';
 
         }
+
+        function calculate() {
+
+            var elso = document.getElementById("num1").value;
+            var muv = document.getElementById("op").value;
+            var masodik = document.getElementById("num2").value;
+
+            if(elso === "" || muv === "" || masodik === ""){
+                alert("Minden mezőt ki kell tölteni!");
+                return;
+            }
+
+            if(muv === "/" && parseFloat(masodik) === 0){
+                alert("Nullával való osztás nem lehetséges!")
+                return;
+            }
+
+            var result;
+
+            switch(muv){
+                case "+":
+                    result = parseFloat(elso) + parseFloat(masodik);
+                    break;
+                case "-":
+                    result = parseFloat(elso) - parseFloat(masodik);
+                    break;
+                case "*":
+                    result = parseFloat(elso) * parseFloat(masodik);
+                    break;
+                case "/":
+                    result = parseFloat(elso) / parseFloat(masodik);
+                    break;
+                default:
+                    alert("Érvénytelen műveleti jel!");
+                    return;
+            }
+
+            document.getElementById("result").innerText = "Eredmény: " + result;
+
+            addToHistory(elso,muv,masodik,result);
+        }
+        
+
     </script>
