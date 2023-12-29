@@ -7,3 +7,33 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
+<body>
+    <h1 class="center" id="title">Számológép</h1>
+    <hr class="bold">
+
+    <p class="center">HTML, CSS és JavaScript alapok</p>
+
+    <div id="calculator">
+        <div class="grid">
+            <label for="num1">Első szám:</label>
+            <input type="number" id="num1">
+
+            <label for="op">Művelet:</label>
+            <input type="text" id="op">
+
+            <label for="num2">Második szám:</label>
+            <input type="number" id="num2">
+
+            <label></label>
+            <button onclick="calculate()">Számol!</button>
+        </div>
+    </div>
+
+    <div id="result" class="center"></div>
+
+    <div id="history" class="hidden">
+        <h2 class="center">Számítási előzmények</h2>
+        <table id="history-table"></table>
+        <button onclick="clearHistory()">Előzmények törlése</button>
+    </div>
