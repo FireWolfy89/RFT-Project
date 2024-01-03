@@ -67,6 +67,11 @@
                 return;
             }
 
+            if(muv === "sqrt" && parseFloat(masodik) === 0){
+                alert("Nullával való osztás nem lehetséges!")
+                return;
+            }
+
             var result;
 
             switch(muv){
