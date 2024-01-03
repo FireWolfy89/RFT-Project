@@ -57,6 +57,11 @@
             var muv = document.getElementById("op").value;
             var masodik = document.getElementById("num2").value;
 
+            if(muv === "sqrt" && parseFloat(masodik) === ""){
+                alert("Írj egy 0-at a második számhoz, hogy ne legyen üres!")
+                return;
+            }
+
             if(elso === "" || muv === "" || masodik === ""){
                 alert("Minden mezőt ki kell tölteni!");
                 return;
@@ -67,13 +72,8 @@
                 return;
             }
 
-            if(muv === "sqrt" && parseFloat(masodik) === 0){
+            if(muv === "sqrt" && parseFloat(elso) === 0){
                 alert("Nullával való osztás nem lehetséges!")
-                return;
-            }
-
-            if(muv === "sqrt" && parseFloat(masodik) === ""){
-                alert("Írj egy 0-at a második számhoz, hogy ne legyen üres!")
                 return;
             }
 
@@ -91,6 +91,9 @@
                     break;
                 case "/":
                     result = parseFloat(elso) / parseFloat(masodik);
+                    break;
+                case "sqrt":
+                    result = Math.sqrt(parseFloat(elso));
                     break;
                 default:
                     alert("Érvénytelen műveleti jel!");
