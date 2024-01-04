@@ -95,6 +95,9 @@
                 case "sqrt":
                     result = Math.sqrt(parseFloat(elso));
                     break;
+                    case "%":
+                    result = (parseFloat(elso) * parseFloat(masodik)) / 100;
+                    break;
                 default:
                     alert("Érvénytelen műveleti jel!");
                     return;
